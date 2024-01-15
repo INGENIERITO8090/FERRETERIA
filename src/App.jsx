@@ -1,23 +1,38 @@
 
-import './App.css'
-import Carrusel from './components/carrusel'
-import Nav_bar from './components/nav_bar'
+import { Fragment } from 'react'
+import { BrowserRouter as Router ,  Route , Routes}  from 'react-router-dom'
+import Index from './views/Index'
+import Login from './components/login'
+
+
 
 function App() {
-  return <div className="App">
- 
- <header>  
-  <Nav_bar title={"FERRE S.A.S"}
-          name1={"Inicio"}
-          name2={"Contacto"}
-          name3={"N/a"}
-          ></Nav_bar>  
-</header>
+  return (
+<Fragment> 
+<Router> 
+ <Routes > 
 
- <Carrusel></Carrusel>
+  <Route path='/' exact element ={<Index/>}> </Route>
+  <Route path='/login' exact element ={<Login></Login>} />
+   
+   
+   
+   </Routes>
 
 
-  </div>  
+
+
+
+
+   
+   
+   
+   
+   
+   
+   </Router>
+</Fragment>
+  )
   
 
 
